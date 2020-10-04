@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'cacheops',
     # my apps
+    'imovel'
 ]
 
 MIDDLEWARE = [
