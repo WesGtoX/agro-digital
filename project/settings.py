@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'cacheops',
+    'import_export',
     # my apps
     'imovel'
 ]
@@ -134,3 +135,8 @@ CACHEOPS = {
 }
 
 CACHEOPS_DEGRADE_ON_FAILURE = True
+
+
+# import and export
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
