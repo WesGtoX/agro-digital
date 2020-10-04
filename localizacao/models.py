@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Regiao(models.Model):
-    slug = models.SlugField('Slug', unique=True)
+    slug = models.SlugField('Slug', blank=True, null=True)
     nome = models.CharField('Nome', max_length=50)
     estado = models.CharField('Estado', max_length=50)
 
@@ -16,7 +16,7 @@ class Regiao(models.Model):
 
 
 class Cidade(models.Model):
-    slug = models.SlugField('Slug', unique=True)
+    slug = models.SlugField('Slug', blank=True, null=True)
     nome = models.CharField('Nome', max_length=50)
     regiao = models.ForeignKey(
         Regiao, verbose_name='Região',
