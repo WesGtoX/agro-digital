@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'cacheops',
     'import_export',
     # my apps
-    'imovel'
+    'imovel',
+    'localizacao'
 ]
 
 MIDDLEWARE = [
