@@ -1,0 +1,14 @@
+[run]
+source = .
+omit =
+    */base/*
+    */project/*
+    */templates/*
+    */static/*
+    */migrations/*
+    */manage.py
+    */__init__.py
+
+[report]
+skip_covered = True
+skip_empty = True

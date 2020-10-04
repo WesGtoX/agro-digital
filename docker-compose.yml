@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  project:
+    build: .
+    command: "./docker-entrypoint.sh"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - .:/app
+
+  redis:
+    image: redis:alpine
+    restart: always
+    command: redis-server
+    ports:
+      - "6379:6379"
