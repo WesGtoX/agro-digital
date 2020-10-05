@@ -5,10 +5,12 @@ from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 
 from .viewsets import UsuarioViewSet
+from imovel.viewsets import PropriedadeViewSet
 from localizacao.viewsets import RegiaoViewSet, CidadeViewSet
 
 router = routers.DefaultRouter()
 router.register('usuarios', UsuarioViewSet)
+router.register('propriedades', PropriedadeViewSet)
 router.register('regiaos', RegiaoViewSet)
 router.register('cidades', CidadeViewSet)
 

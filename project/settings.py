@@ -22,11 +22,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     # installed apps
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework_gis',
     'cacheops',
     'import_export',
+    'leaflet',
     # my apps
     'imovel',
     'localizacao'
@@ -67,7 +70,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         "NAME": config('POSTGRES_DB', default="postgres"),
         "USER": config('POSTGRES_USER', default="postgres"),
         "PASSWORD": config('POSTGRES_PASSWORD', default="postgres"),
@@ -144,14 +147,25 @@ CACHEOPS = {
     'auth.user': {'ops': 'get', 'timeout': 60 * 15},
     'auth.*': {'ops': {'fetch', 'get'}},
     'auth.permission': {'ops': 'all'},
-    # '*.*': {'ops': ()},
-    # '*.*': {},
-    'some_app.*': None,
+    'imoveis.*': {'ops': 'get'},
+    'localizacao.*': {'ops': 'get'}
 }
 
 CACHEOPS_DEGRADE_ON_FAILURE = True
 
 
-# import and export
+# Import and export
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
+
+
+# Leaflet
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (-12, -52),
+    'DEFAULT_ZOOM': 3,
+    'MAX_ZOOM': 20,
+    'MIN_ZOOM': 3,
+    'SCALE': 'both',
+    'ATTRIBUTION_PREFIX': 'Agro Digital made by Wesley Mendes'
+}

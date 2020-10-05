@@ -1,4 +1,4 @@
-from django.db import models
+from django.contrib.gis.db import models
 from localizacao.models import Regiao
 
 
@@ -21,7 +21,7 @@ class Propriedade(models.Model):
         related_name='propriedade_tipo',
         on_delete=models.PROTECT
     )
-    foto = models.FileField()
+    foto = models.FileField('Foto', blank=True, null=True)
 
     regiao = models.ForeignKey(
         Regiao, verbose_name='Região',
@@ -29,6 +29,8 @@ class Propriedade(models.Model):
         on_delete=models.PROTECT,
         blank=True, null=True
     )
+
+    posicao = models.PointField('Posição', blank=True, null=True)
 
     criado_em = models.DateTimeField('Criado em', auto_now_add=True)
     modificado_em = models.DateTimeField('Modificado em', auto_now=True)

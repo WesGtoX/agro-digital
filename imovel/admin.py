@@ -1,5 +1,7 @@
 from django.contrib import admin
+
 from import_export.admin import ImportExportModelAdmin
+from leaflet.admin import LeafletGeoAdmin
 
 from .models import Tipo, Propriedade
 from .resources import TipoResource, PropriedadeResource
@@ -14,7 +16,7 @@ class TipoAdmin(ImportExportModelAdmin):
 
 
 @admin.register(Propriedade)
-class PropriedadeAdmin(ImportExportModelAdmin):
+class PropriedadeAdmin(ImportExportModelAdmin, LeafletGeoAdmin):
     resource_class = PropriedadeResource
     list_display = ['nome', 'tipo']
     list_filter = ['nome', 'tipo']

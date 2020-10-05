@@ -2,6 +2,9 @@ FROM python:3.8-slim-buster
 
 ENV PYTHONUNBUFFERED 1
 
+RUN apt-get update &&\
+    apt-get install -y binutils libproj-dev gdal-bin
+
 RUN mkdir /app
 WORKDIR /app
 
