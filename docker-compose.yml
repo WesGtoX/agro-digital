@@ -2,13 +2,16 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres
+    build: ./docker/postgresql
     environment:
+      - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
 
   project:
-    build: .
+    build:
+      context: .
+      dockerfile: ./docker/django/Dockerfile
     command: "./docker-entrypoint.sh"
     ports:
       - "8000:8000"
