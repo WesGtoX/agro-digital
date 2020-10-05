@@ -1,7 +1,7 @@
 <h1 align="center">
   Agro Digital
   <br />
-  <img alt="Agro Digital CI" src="https://github.com/WesGtoX/agro_digital/workflows/Agro%20Digital%20CI/badge.svg" />
+  <img alt="Agro Digital CI" src="https://github.com/WesGtoX/agro-digital/workflows/Agro%20Digital%20CI/badge.svg" />
 </h1>
 
 <p align="center">
@@ -12,10 +12,10 @@
 </p>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wesgtox/agro_digital?style=plastic" />
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/wesgtox/agro_digital?style=plastic" />
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wesgtox/agro_digital?style=plastic" />
-  <img alt="License" src="https://img.shields.io/github/license/wesgtox/agro_digital?style=plastic" />
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wesgtox/agro-digital?style=plastic" />
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/wesgtox/agro-digital?style=plastic" />
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wesgtox/agro-digital?style=plastic" />
+  <img alt="License" src="https://img.shields.io/github/license/wesgtox/agro-digital?style=plastic" />
 </p>
 
 
@@ -91,7 +91,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/WesGtoX/agro_digital.git
+git clone https://github.com/WesGtoX/agro-digital.git
 ```
 2. Defina uma `SECRET_KEY` em `.env`:
 ```bash
