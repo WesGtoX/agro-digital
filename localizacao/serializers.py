@@ -12,8 +12,6 @@ class RegiaoSerializer(serializers.ModelSerializer):
             'nome',
             'estado',
         )
-        lookup_field = 'slug'
-        extra_kwargs = {'url': {'lookup_field': 'slug'}}
 
 
 class CidadeSerializer(serializers.ModelSerializer):
@@ -26,5 +24,3 @@ class CidadeSerializer(serializers.ModelSerializer):
             'nome',
             'regiao',
         )
-        lookup_field = 'slug'
-        extra_kwargs = {'url': {'lookup_field': 'slug'}}

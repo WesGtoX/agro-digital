@@ -11,7 +11,7 @@ from localizacao.viewsets import RegiaoViewSet, CidadeViewSet
 router = routers.DefaultRouter()
 router.register('usuarios', UsuarioViewSet)
 router.register('propriedades', PropriedadeViewSet)
-router.register('regiaos', RegiaoViewSet)
+router.register('regioes', RegiaoViewSet)
 router.register('cidades', CidadeViewSet)
 
 
