@@ -162,7 +162,7 @@ Para ter acesso a todos os endpoints, exceto o de de criação de usuário, prec
 
 ## Licença
 
-Distribuído sob a Licença MIT. Consulte [LICENSE](LICENSE.md) para mais informações.
+Distribuído sob a Licença MIT. Consulte [LICENSE](LICENSE) para mais informações.
 
 ---
 
